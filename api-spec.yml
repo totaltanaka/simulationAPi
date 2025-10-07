@@ -6,8 +6,8 @@ info:
     支払額、手数料、その他の金融計算を実行するRESTful APIです。
     業務IDに基づく2つの異なる計算エンジンを提供します。
     
-    - 標準計算エンジン (business_id != "1"): 基本的な分割手数料計算
-    - 高度計算エンジン (business_id = "1"): 複利計算による高度な計算
+    - オートクレジット以外 (business_id != "1"): 基本的な分割手数料計算
+    - オートクレジット (business_id = "1"): 複利計算による高度な計算
   version: 3.0.0
   contact:
     name: ERC Credit API Support
