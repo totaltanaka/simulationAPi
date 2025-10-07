@@ -74,7 +74,7 @@ paths:
                   payment_day: "27"
                   bonus_month_summer: "7"
                   bonus_month_winter: "12"
-                  bonus_add: "50000"
+                  bonus_add: "50(千単位)"
       responses:
         '200':
           description: 計算成功
