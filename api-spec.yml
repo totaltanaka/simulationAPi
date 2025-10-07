@@ -248,45 +248,48 @@ components:
           pattern: '^[0-9]+(\.[0-9]{1,2})?$'
           example: "5.5"
         shop_commission_rate:
-          type: number
-          description: 店手数料率（オプション）
-          minimum: 0
-          example: 2.0
+          type: string
+          description: 店手数料率（オプション、小数点第二位まで）
+          pattern: '^[0-9]*(\.[0-9]{1,2})?$'
+          example: "2.0"
         skip_rate:
-          type: number
-          description: スキップ料率（オプション）
-          minimum: 0
-          example: 1.0
+          type: string
+          description: スキップ料率（オプション、小数点第二位まで）
+          pattern: '^[0-9]*(\.[0-9]{1,2})?$'
+          example: "1.0"
         payment_start:
           type: string
           description: 支払い開始月（YYYY/MM形式）
           pattern: '^[0-9]{4}/[0-9]{2}$'
           example: "2025/09"
         payment_number:
-          type: string
+          type: number
           description: 支払回数
-          pattern: '^[0-9]+$'
-          example: "24"
+          minimum: 1
+          example: 24
         payment_day:
-          type: string
+          type: number
           description: 支払開始日（1-31）
-          pattern: '^[0-9]+$'
-          example: "27"
+          minimum: 1
+          maximum: 31
+          example: 27
         bonus_month_summer:
-          type: string
+          type: number
           description: ボーナス払い月夏（1-12、オプション）
-          pattern: '^[0-9]*$'
-          example: "7"
+          minimum: 1
+          maximum: 12
+          example: 7
         bonus_month_winter:
-          type: string
+          type: number
           description: ボーナス払い月冬（1-12、オプション）
-          pattern: '^[0-9]*$'
-          example: "12"
+          minimum: 1
+          maximum: 12
+          example: 12
         bonus_add:
-          type: string
+          type: number
           description: ボーナス加算額（オプション）
-          pattern: '^[0-9]*$'
-          example: "50000"
+          minimum: 0
+          example: 50000
         offer_goods_id:
           type: string
           description: オートクレジット商品ID（business_id="1"の場合必須）
