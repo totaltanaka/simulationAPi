@@ -74,7 +74,7 @@ paths:
                   payment_day: "27"
                   bonus_month_summer: "7"
                   bonus_month_winter: "12"
-                  bonus_add: "50(千単位)"
+                  bonus_add: "50"
       responses:
         '200':
           description: 計算成功
@@ -287,9 +287,9 @@ components:
           example: 12
         bonus_add:
           type: number
-          description: ボーナス加算額（オプション）
+          description: ボーナス加算額（オプション）(千単位)
           minimum: 0
-          example: 50000
+          example: 50(千単位)
         offer_goods_id:
           type: string
           description: オートクレジット商品ID（business_id="1"の場合必須）
