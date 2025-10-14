@@ -75,6 +75,19 @@ paths:
                   bonus_month_summer: "7"
                   bonus_month_winter: "12"
                   bonus_add: "50"
+              shop_commission_example:
+                summary: 店舗手数料とスキップ料率例
+                value:
+                  business_id: "4"
+                  product_sum: 100000
+                  down_payment_sum: 0
+                  real_annual_rate: "6.00"
+                  skip_rate: "4.20"
+                  skip_rate_shop: "0.5"
+                  shop_commission_rate: "12.47"
+                  payment_start: "2026/05"
+                  payment_number: "10"
+                  payment_day: "27"
       responses:
         '200':
           description: 計算成功
@@ -257,6 +270,11 @@ components:
           description: スキップ料率（オプション、小数点第二位まで）
           pattern: '^[0-9]*(\.[0-9]{1,2})?$'
           example: "1.0"
+        skip_rate_shop:
+          type: string
+          description: スキップ料率の店手数料率（オプション、小数点第二位まで）
+          pattern: '^[0-9]*(\.[0-9]{1,2})?$'
+          example: "0.5"
         payment_start:
           type: string
           description: 支払い開始月（YYYY/MM形式）
