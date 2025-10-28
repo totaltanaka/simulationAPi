@@ -275,6 +275,11 @@ components:
           description: スキップ料率の店手数料率（オプション、小数点第二位まで）
           pattern: '^[0-9]*(\.[0-9]{1,2})?$'
           example: "0.5"
+        monthly_payment_min:
+          type: number
+          description: 月払い最低額（オプション）
+          minimum: 0
+          example: 10000
         payment_start:
           type: string
           description: 支払い開始月（YYYY/MM形式）
